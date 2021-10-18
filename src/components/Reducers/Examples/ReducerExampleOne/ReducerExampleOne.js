@@ -1,6 +1,9 @@
 import { useState } from "react";
 
-const initialUser = { firstName: 'Daryl', lastName: 'Duckmanton' };
+const initialUser = { 
+    firstName: 'Daryl',
+    lastName: 'Duckmanton'
+};
 
 export const ReducerExampleOne = () => {
     const [user, setUser] = useState(initialUser);
@@ -17,11 +20,11 @@ export const ReducerExampleOne = () => {
             <form>
                 <div>
                     <label>First Name</label>
-                    <input type="text" value={user.firstName} onChange={(e) => setUser({ firstName: e.target.value })} />
+                    <input type="text" value={user.firstName} onChange={(e) => setUser({ ...user, firstName: e.target.value })} />
                 </div>
                 <div>
                     <label>Last Name</label>
-                    <input type="text" value={user.lastName} onChange={(e) => setUser({ lastName: e.target.value })} />
+                    <input type="text" value={user.lastName} onChange={(e) => setUser({ ...user, lastName: e.target.value })} />
                 </div>
             </form>
         </section>

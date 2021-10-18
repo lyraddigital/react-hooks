@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const StateExampleThree = () => {
-    const [todos, setTodos] = useState([]);
+    const [todos] = useState([]);
 
     const createTodo = (description) => {        
 
